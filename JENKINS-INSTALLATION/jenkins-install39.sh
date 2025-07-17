@@ -3,7 +3,7 @@
 # date: 14/04/2025
 # Installing Jenkins on RHEL 7/8/9, CentOS 7/8/9 or Amazon Linux OS
 # You can execute this script as user-data when launching your EC2 VM.
-sudo timedatectl set-timezone America/New_York
+sudo timedatectl set-timezone Africa/Lagos
 sudo hostnamectl set-hostname jenkins
 sudo yum install wget git nano tree vim unzip -y
 sudo wget -O /etc/yum.repos.d/jenkins.repo \
