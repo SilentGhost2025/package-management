@@ -9,14 +9,15 @@ sudo yum install wget git nano tree vim unzip -y
 sudo wget -O /etc/yum.repos.d/jenkins.repo \
     https://pkg.jenkins.io/redhat-stable/jenkins.repo
 sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
-sudo yum upgrade -y 
+sudo yum upgrade
 # Add required dependencies for the jenkins package
-sudo yum install fontconfig java-17-openjdk -y 
-sudo yum install jenkins -y 
+sudo yum install fontconfig java-21-openjdk
+sudo yum install jenkins
 sudo systemctl daemon-reload
 echo "end of jenkins installation"
 sudo yum install net-tools -y 
 # start jenkins 
-sudo systemctl start jenkins
 sudo systemctl enable jenkins
+sudo systemctl start jenkins
+sudo systemctl status jenkins
 sudo su - ec2-user
